@@ -57,7 +57,10 @@ def main():
     # Write customers.json
     with open("customers.json", "w", encoding="utf-8") as f:
         json.dump(customers, f, indent=2, sort_keys=True)
-
-
+    # Write items.json (sorted by name)
+    with open("items.json", "w", encoding="utf-8") as f:
+        json.dump(dict(sorted(items.items())), f, indent=2)
+    print(f"Processed {len(orders)} orders.")
+    print(f"{len(customers)} customers, {len(items)} items saved.")
 if __name__ == "__main__":
     main()
