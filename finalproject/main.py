@@ -47,6 +47,7 @@ async def get_all_customers():
     return customer_list
 
 @app.put("/custmers/{id}")
+
 async def update_customer(id: int, customer: Customer):
     conn, cursor = connect_to_db()
 
