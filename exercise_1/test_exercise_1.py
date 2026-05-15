@@ -12,7 +12,7 @@ total_points = 0
 def test(description, input_str, output_str):
     print(f"  Testing {description}...")
     try:
-        output = subprocess.check_output(['py', args.filename], input=input_str, text=True)
+        output = subprocess.check_output(['python3', args.filename], input=input_str, text=True)
     except subprocess.CalledProcessError as e:
         print("  FAILED script returned an eror")
     else:
